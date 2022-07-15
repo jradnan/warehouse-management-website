@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Login from './Components/User/user/Login';
+import RequireAuth from './Components/User/user/RequireAuth'
+
+import Notfound404 from './Components/User/Notfound404';
+import Inventory from './Components/Inventory/Inventory';
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+import Blogs from './Components/Blogs/Blog';
+import Register from './Components/User/user/Register';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar></Navbar>
+      <Routes>
+    
+        <Route path='*' element={<Notfound404></Notfound404>} />
+        <Route path='/' element={<Home></Home>} />
+        <Route path='/home' element={<Home></Home>} />
+        <Route path='/about' element={<div className='page-about'>
+          <About></About>
+        </div>} />
+        <Route path='/blogs' element={<Blogs></Blogs>} />
+        <Route path='/contact' element={<Contact></Contact>}/>
+        <Route path='/login' element={<Login></Login>} />
+        <Route path='/register' element={<Register></Register>} />
+        <Route path='/inventory' element={<RequireAuth>
+          <Inventory></Inventory>
+        </RequireAuth>
+        } />
+      </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
