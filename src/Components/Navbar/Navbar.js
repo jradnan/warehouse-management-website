@@ -39,7 +39,11 @@ const Navbar = () => {
                     <div className="content">
                         <div className="logo">
                             <Link to='/'>
-                                <h1>Inventory</h1>
+                               <div>
+                               <h1 style={{fontSize:"17px"}} className='text-dark'>Stock Smart</h1>
+                                <p className='text-dark'>INVENTORY SOLUTION</p>
+                                </div> 
+                                
                             </Link>
                             <FontAwesomeIcon onClick={navHandler} icon={faBars} />
                         </div>
