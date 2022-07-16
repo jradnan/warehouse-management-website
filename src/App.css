@@ -14,13 +14,13 @@
     padding: 7px 19px;
     text-decoration: none;
     color: white;
-    border: 1px solid var(--red);
+    border: 1px solid #34495e;
     text-transform: uppercase;
     font-weight: 600;
 }
 
 .btn-special1:hover {
-    background-color: var(--red);
+    background-color: #34495e;
     padding: 8px 20px;
     text-decoration: none;
     color: white;
@@ -30,7 +30,7 @@
 }
 
 .btn-special2 {
-    background-color: var(--red);
+    background-color: #34495e;
     padding: 8px 20px;
     text-decoration: none;
     color: white;

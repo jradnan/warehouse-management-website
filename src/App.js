@@ -13,6 +13,7 @@ import Blogs from './Components/Blogs/Blog';
 import Register from './Components/User/user/Register';
 import { ToastContainer } from 'react-toastify';
 import ManageInventory from './Components/Inventory/ManageInventory';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         } />
       </Routes>
       <ToastContainer></ToastContainer>
+      <Footer></Footer>
     </div>
   );
 }

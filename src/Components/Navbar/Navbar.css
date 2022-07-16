@@ -46,7 +46,7 @@ nav {
 /* navbar top end  */
 .navbar {
     width: 100%;
-    background-color: var(--dark-blue);
+    background-color:#16a085;
 }
 
 .navbar .content {
