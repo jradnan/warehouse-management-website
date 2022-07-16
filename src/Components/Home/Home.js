@@ -3,12 +3,13 @@ import Header from './Header'
 import Card from '../Inventory/Card'
 import About from '../About/About';
 import Contact from '../Contact/Contact.jsx';
+import Home2 from '../Home2.js/Home2';
 const Home = () => {
 
   const [loading, setloading] = useState(true);
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch('https://peaceful-waters-00676.herokuapp.com/product')
+    fetch('https://quiet-hamlet-32880.herokuapp.com/product')
       .then(res => res.json())
       .then(json => {setProduct(json)
         setloading(false)
@@ -23,6 +24,7 @@ const Home = () => {
     <main className='home'>
       <Header></Header>
       <About />
+    
       <div className="container">
         <h1 className='text-center py-5'>Products</h1>
         <div className="grid-3-col">

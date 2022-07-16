@@ -12,6 +12,7 @@ import Contact from './Components/Contact/Contact';
 import Blogs from './Components/Blogs/Blog';
 import Register from './Components/User/user/Register';
 import { ToastContainer } from 'react-toastify';
+import ManageInventory from './Components/Inventory/ManageInventory';
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
         <Route path='/register' element={<Register></Register>} />
         <Route path='/inventory' element={<RequireAuth>
           <Inventory></Inventory>
+        </RequireAuth>
+        } />
+        <Route path='/inventory/:id' element={<RequireAuth>
+          <ManageInventory></ManageInventory>
         </RequireAuth>
         } />
       </Routes>
